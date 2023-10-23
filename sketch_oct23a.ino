@@ -1,5 +1,6 @@
 #include "SevenSeg.h"
- 
+
+//defining the pin locations and fucntions
 const int trigPin = 3;
 const int echoPin = 2;
 
@@ -32,6 +33,7 @@ void setup() {
   //Control brightness (values 0-100);
   disp.setDutyCycle(50);
 
+  //sets the LEDs into LOW which is equalto 0
   digitalWrite(greenLED, LOW);
   digitalWrite(yellowLED, LOW);
   digitalWrite(redLED, LOW);
@@ -55,6 +57,7 @@ void loop() {
   distance = duration * 0.034 / 2;
   distance = distance / 2.54;
 
+  //writes the distance into the display 
   if(distance < maxDistanceInches)
     disp.writeDigit(int(distance));
 
