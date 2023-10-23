@@ -1,3 +1,4 @@
+//Make sure you install SevenSeg.h package before running the code
 #include "SevenSeg.h"
 
 //defining the pin locations and fucntions
